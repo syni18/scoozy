@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Poppins&family=Quicksand:wght@300&display=swap');
+
+/* Defining custom properties in the :root selector */
+:root {
+  
+  /* font-family */
+    --default-font: Poppins;
+
+  /* colors */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --default-color: #333;
+    --background-color: #f4f4f4;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --outline-color: #dddddd;
+
+    --Vibrant-Teal-color: #1B9C9C;
+    --cream-color: #FFF5E1;
+    --warm-orange-color: #F39C12;
+    --text-dark-slate-color: #2C3E50;
+
+  /* font-size */
+    --default-font-size: 16px;
+    --heading-font-size: 2rem;
+    --subheading-font-size: 1.5rem;
+
+  /* border */
+    --default-border: 1px solid black;  
+
+  /* background color */
+    --primary-bg: #242526;
+    --secondary-bg: #fff;
+
+  /* border radius */
+    --border-radius: 4px;
+
+  /* text color */
+    --primary-text-color: #555;
+    --secondary-text-color: #cecece;
+    
+  /* animation speed */
+    --speed: 500ms;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ul{
+  list-style: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: black;
+  text-decoration: none;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input::-webkit-search-cancel-button{
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

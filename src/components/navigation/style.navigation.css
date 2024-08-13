@@ -1,0 +1,215 @@
+.nav-wrapper{
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.nav-container{
+    /* border-bottom: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 7rem; */
+    padding: 6px 7rem;
+    /* width: 85%; */
+}
+.container-left{
+    
+}
+.container-left > .brand-logo{
+    color: #1B9C9C;
+    font-weight: 600;
+    height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container-middle{
+
+}
+.container-middle > .nav-link{
+    display: flex;
+    padding: 0;
+    /* margin-top: 12px; */
+    list-style: none;
+}
+
+.container-middle > .nav-link .active {
+    border-bottom: 3px solid #490B3D;
+}
+.nav-item{
+    margin: 0 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 0;
+    /* height: 100%; */
+    position: relative;
+    
+}
+
+.dropdown-content {
+  text-transform: none;
+  display: block;
+  position: absolute;
+  left: -10px !important;
+  top: 36px !important;
+  background-color: #fff !important;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.container-right{
+    display: flex;
+    /* border: 1px solid black; */
+
+}
+.container-right >.nav-search{
+    margin:0.1rem 0.6rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.nav-search > .search-input {
+    height: 2rem;
+    border: 1px solid #bcbcbc;
+    width: 20rem;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 0.5rem;
+    padding-left: 2.5rem;
+    background-color: #ffffff;
+}
+.search-input::-webkit-search-cancel-button{
+    display: none;
+}
+.nav-search .search-label{
+  display: flex;
+  align-items: center;
+    cursor: pointer;
+    position: absolute;
+    left: 2px;
+    /* top: px; */
+    border: none;
+    border-radius: 4px;
+    padding: 2.4px;
+    background: #1B9C9C;
+    color: #fff;
+}
+.nav-console {
+  display: flex;
+  align-items: center;
+  color: #1B9C9C;
+  cursor: pointer;
+  /* margin:0.1rem 0.6rem; */
+
+}
+.container-right > .nav-profile{
+    margin:0.3rem 0.6rem;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+.nav-profile .user-auth-icon {
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 14px;
+    background-color: #d3d3d3;
+    color: black;
+    font-weight: 600;
+}
+.container-right > .nav-cart{
+    /* margin:0.1rem 0.6rem; */
+  display: flex;
+  align-items: center;
+  color: #1B9C9C;
+  cursor: pointer;
+    position: relative;
+}
+.nav-cart .nav-cart-value{
+    position: absolute;
+    /* border: 1px solid black; */
+    color: var(--text-dark-slate-color);
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    left: 18px;
+    display: flex;
+    font-weight: bold;
+    border: 1px solid #1B9C9C;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background: #1B9C9C;
+    border-radius: 99px;
+}
+
+/* Existing styles */
+
+/* Media query for tablets and below */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .nav-link {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .nav-item, .container-middle > .nav-link > #css-link {
+    margin: 0.5rem 0; /* Adjust margin for vertical layout */
+  }
+
+  .container-right > .nav-search {
+    margin-top: 1rem; /* Add some space above search bar */
+  }
+
+  .nav-search > .search-input {
+    width: 100%; /* Full width for the search bar */
+    margin-right: 0; /* Remove margin */
+  }
+
+  /* Adjust search icon and profile icon for smaller screens */
+  .container-right {
+    flex-direction: column; /* Stack search and icons vertically */
+    align-items: center; /* Center items */
+  }
+
+  .container-right > .nav-profile, .container-right > .nav-cart {
+    margin: 0.5rem 0; /* Adjust margin for vertical layout */
+  }
+
+  .nav-cart .nav-cart-value {
+    top: -10px; /* Adjust cart value position */
+    left: 25px; /* Adjust cart value position */
+  }
+
+  /* Optionally hide dropdowns on smaller screens or adjust their styling */
+  .dropdown-content {
+    display: none; /* Hide dropdowns on smaller screens */
+  }
+}
+
+/* Additional Media Query for Phones */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem; /* Further reduce padding for very small screens */
+  }
+
+  /* Further adjustments can be made as necessary for very small screens */
+}
