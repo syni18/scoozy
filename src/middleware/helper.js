@@ -13,7 +13,7 @@ export async function getUsername() {
 }
 
 // Function to get a cookie by name
-function getCookie(name) {
+/*function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(";").shift();
@@ -26,6 +26,7 @@ export async function getUsernameFromCookie() {
   let decode = jwtDecode(token);
   return decode.username; // Assuming the username is stored in the 'username' field
 }
+  */
 
 
 export async function fetchSearchProducts(searchInput) {
